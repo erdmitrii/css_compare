@@ -1,0 +1,328 @@
+.first-with-img{
+	padding-bottom: 63px;
+	position: relative;
+}
+.main-img{
+	position: relative;
+
+	& .gradient{
+		max-width: 590px;
+	}
+
+	& .on-img-text{
+		position: absolute;
+		bottom: 48px;
+		left: 68px;
+		right: 110px;
+
+		& h2,
+		& p{
+			color: $color-white;
+		}
+		& h2{
+			margin-bottom: 20px;
+			font-size: 48px;
+				font-weight: 500;
+		}
+		& p{
+
+			font-size: 18px;
+				line-height: 1.33;
+		}
+	}
+}
+.customers{
+	padding-top: 30px;
+	padding-bottom: 60px;
+
+	& h2{
+		margin-top: 0;
+		margin-bottom: 48px;
+	}
+	& > .row{
+		margin: 0 -10px;
+		& > div{
+			margin-bottom: 20px;
+			padding: 0 10px;
+		}
+	}
+	& .customer{
+		position: relative;
+		& .logo{
+			height: 310px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $color-footer-bg;
+			
+			&:hover + .text{
+				display: block;
+			}
+		}
+		& .text{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			padding: 35px;
+			background-color: $color-gold;
+			display: none;
+			&:hover{
+				display: block;
+			}
+			& h2{
+				color: $color-white;
+				margin-bottom: 25px;
+			}
+			& p{
+				font-size: 14px;
+				line-height: 1.43;
+				color: $color-white;
+			}
+		}
+	}
+}
+main.about{
+	padding-top: 60px;
+
+	& .first-with-img{
+		border-bottom: solid 1px $color-light-grey;
+	}
+
+	& .main-img-right-text{		
+
+		& p{
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 1.38;
+			color: $color-footer-text;
+		}
+
+		& h2{
+			margin-bottom: 25px;
+			font-size: 18px;
+			line-height: 1.33;
+			text-align: left;
+			color: $color-black;
+		}
+	}
+
+	& .advantages{
+		padding-top: 30px;
+		padding-bottom: 90px;
+		border-bottom: 1px solid $color-light-grey;
+
+		& > .row{
+			text-align: center;
+		}
+
+		& h2{
+			margin-bottom: 60px;
+		}
+
+		& .digit{
+			font-size: 48px;
+			font-weight: 900;
+			color: $color-gold;
+		}
+
+		& p{
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 1.38;
+			text-align: center;
+			color: $color-footer-text;
+		}
+	}
+
+	& .directions{
+		padding-top: 25px;
+		padding-bottom: 75px;
+		border-bottom: 1px solid $color-light-grey;
+
+		& .directions-left{
+			& h2{
+				margin-top: 0;
+				margin-bottom: 28px;
+			}
+		}
+
+		& .consult{
+			& h2{
+				margin-top: 0;
+				margin-bottom: 44px;
+			}
+			& p{
+				font-size: 16px;
+				font-weight: 300;
+				line-height: 1.38;
+				color: $color-footer-text;
+				&.name{
+					margin-top: 35px;
+					font-size: 22px;
+				}
+			}
+			& a.tel{
+				font-size: 24px;
+				font-weight: 600;
+				color: $color-gold;
+				display: inline-block;
+				margin-top: 19px;
+			}
+		}
+	}
+	& .big-projects{
+		padding-top: 30px;
+		padding-bottom: 90px;
+		border-bottom: 1px solid $color-light-grey;
+
+		& h2{
+			margin-bottom: 55px;
+		}
+
+		& > .row > div{
+			margin-bottom: 55px;
+		}
+
+		& p{
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 1.38;
+			color: $color-footer-text;
+		}
+
+		& p.date{
+			font-size: 18px;
+			line-height: 1.33;
+			text-align: left;
+			color: $color-gold;
+			margin-bottom: 15px;
+		}
+	}
+}
+@media (min-width: 992px){
+	.main-img-right-text{ 
+		position: absolute;
+		right: 0;
+		bottom: 53px;
+		padding-left: 0;
+	}
+}
+@media (max-width: 991px){
+	main.about .main-img{
+		& .on-img-text{
+			left: 38px;
+			right: 50px;
+		}
+	}
+}
+@media (min-width: 768px){
+	.advantages #advantagesXs,
+	.customers #customersXs{
+		display: none;	
+	}
+	.project-search-result .customers .customer .text a{
+		position: absolute;
+		bottom: 25px;
+	}
+}
+@media (max-width: 767px){
+	.first-with-img{
+		margin-right: -26px;
+		margin-left: -26px;	
+		padding-bottom: 20px;
+
+		& .main-img{
+			overflow-x: hidden;
+			min-height: 400px;
+			padding: 0;
+			margin-bottom: 30px;
+
+			& .img-responsive{
+				width: 100%;
+				margin: 0 auto;
+			}
+
+			& .on-img-text{
+				left: 26px;
+				bottom: 30px;
+				right: 30px;
+
+				& h2{
+					font-size: 10vw;
+				}
+
+				& p {
+					font-size: 5vw;
+				}
+			}
+		}
+
+		& .gradient {
+			left: 0;
+			right: 0;
+			max-width: none;
+		}
+
+		& .main-img-right-text{
+			padding: 0 26px;
+		}
+	}
+	main.about{
+		padding-top: 0;
+
+		& .advantages{
+			padding-top: 15px;
+			padding-bottom: 30px;
+			& h2{
+				margin-bottom: 30px;
+			}
+		}
+
+		& .customers{
+			padding-top: 20px;
+			padding-bottom: 50px;
+
+			& > h2{
+				margin-bottom: 30px;
+			}
+
+			& #customersXs .item{
+				padding: 40px 30px;
+				background-color: $color-footer-bg;
+				text-align: left;
+				& .img-responsive{
+					margin: 0 auto 40px;
+				}
+				& h2{
+					font-size: 16px;
+					text-align: left;
+					color: $color-black;
+					margin-bottom: 15px;
+				}
+				& p{
+					font-size: 14px;
+					font-weight: 300;
+					line-height: 1.43;
+					color: $color-black;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 400px){
+	main.about{
+		& .first-with-img .main-img{
+			display: flex;
+			justify-content: center;
+
+			& .img-responsive{
+				max-width: none;
+				height: 400px;
+				width: auto;
+			}
+		}
+	}
+}

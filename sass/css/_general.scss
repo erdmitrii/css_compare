@@ -1,0 +1,254 @@
+@font-face {
+   font-family: Lato;  
+   src: url('../../fonts/Lato-Regular.eot'); 
+   src: url('../../fonts/Lato-Regular.eot?') format('eot'), 
+	    url('../../fonts/Lato-Regular.woff') format('woff'),
+	    url('../../fonts/Lato-Regular.ttf')  format('truetype'),
+	    url('../../fonts/Lato-Regular.svg#svgGraublauweb') format('svg');
+}
+
+/*Colors*/
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gold: #dcac49;
+$color-grey: #eaeaea;
+$color-light-grey: #d6d6d6;
+$color-footer-bg: #f8f8f8;
+$color-footer-text: #2d2d2d;
+
+/*Common*/
+*{
+	font-family: Lato;
+	outline: none;
+}
+body{
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: subpixel-antialiased;
+}
+ul,ol{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+h1, h2, h3{
+	color: $color-black;
+	margin: 0;
+}
+h2{
+	font-size: 24px;
+  	font-weight: 600;
+}
+h3{
+	font-size: 18px;
+  	font-weight: bold;
+}
+a{
+	&:hover{
+		text-decoration: none;
+	}
+	&.black,
+	&.black:hover{
+		color: $color-black;
+	}
+}
+button:not(.dropdown-toggle){
+	border: none;
+	padding: 10px 12.6px;
+	font-size: 12px;
+	&.gold{
+		background-color: $color-gold;
+		&.black{
+			color: $color-black;
+		}
+		&.white{
+			color: $color-white;
+		}
+	}
+	&.grey{
+		background-color: $color-grey;
+		&.black{
+			color: $color-black;
+		}
+	}
+}
+a.gold{
+	background-color: $color-gold;
+	border: 2px solid $color-gold;
+	padding: 14px 40px 15px;
+	font-size: 16px;
+  	font-weight: 600;
+  	display: inline-block;
+  	transition: all .2s ease-in;
+  	&.white{
+		color: $color-white;
+		&:hover{
+			background-color: $color-white;
+			color: $color-gold;
+			transition: all .0s ease-out
+		}
+	}
+}
+.btn-group.btn-select{
+	& .dropdown-toggle{
+		width: 100%;
+		position: relative;
+		text-align: left;
+		background-color: $color-grey;
+		border-radius: 0;
+		padding: 12px 14px 10px;
+		font-size: 12px;
+		color: $color-black;
+
+		& span:last-child{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%) rotate(45deg);
+			right: 20px;
+			width: 7px;
+			height: 7px;
+			border-right: 1px solid $color-black;
+			border-bottom: 1px solid $color-black;
+		}
+	}
+
+	& .dropdown-menu{
+		width: 100%;
+		font-size: 12px;
+	}
+}
+.gradient{
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65));
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+}
+.directions{
+	& ul li a{
+		padding: 15px 20px 15px 55px;
+		position: relative;
+		display: block;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 1.38;
+		color: $color-footer-text;
+		
+
+		&:before{
+			content: "";
+			position: absolute;
+			top: 17px;
+			left: 20px;
+			width: 15px;
+			height: 15px;
+			background-color: $color-gold;
+		}
+
+		&:hover{
+			color: $color-gold;
+			background-color: $color-footer-bg;
+		}
+	}
+}
+/*переключатели слайдеров*/
+.carousel.slide{
+	padding-bottom: 50px;
+
+	&.all-width{
+		& .img-center{
+			display: flex;
+			justify-content: center;
+		}
+		& .container{
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	& .slider-control{
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		& .carousel-indicators{
+			bottom: auto;
+			display: inline-block;
+			left: auto;
+			margin-left: 0;
+			position: relative;
+			width: auto;
+			top: 2px;
+
+			& li{
+				background-color: $color-grey;
+				border: none;
+				width: 12px;
+				height: 12px;
+				margin: 0 2px;
+				&.active{
+					background-color: $color-gold;
+					margin: 0 2px;
+				}
+			}			
+		}
+		& a:first-child{
+			margin-right: 20px;
+		}
+		& a:last-child{
+			margin-left: 20px;
+			& img{
+				transform: rotate(180deg);
+			}
+		}
+	}	
+	& .carousel-inner .item{
+		text-align: center;
+		& a{
+			display: inline-block;
+		}
+	}
+}
+@media (min-width: 1200px){
+	.container{
+		width: 980px;
+	}
+}
+@media (min-width: 768px){
+	main{
+		padding-top: 75px;
+	}
+}
+@media (max-width: 767px){
+	h2{
+		font-size: 18px;
+	}
+	h3{
+		font-size: 14px;
+	}
+	.container{
+		padding-left: 26px;
+		padding-right: 26px;
+	}
+	main{
+		padding-top: 50px;
+	}
+	a.gold{
+		padding-left: 23px;
+    	padding-right: 23px;
+	}
+	.btn-group.btn-select{
+		width: 100%;
+	}
+	.carousel.slide{
+		padding-bottom: 35px;
+		& .slider-control a{
+			display: none;
+		}
+		&.all-width .img-center img{
+			max-height: 250px;
+		}
+	}
+}
